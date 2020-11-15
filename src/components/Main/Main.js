@@ -2,7 +2,7 @@ import React from 'react';
 import './Main.css';
 import Column from "../Column/Column";
 
-const Main = ({ data }) =>
+const Main = ({ data, setData }) =>
     <main className="main">
         {data.map(({ title, issues }) => <Column key={title} title={title} issues={issues} />)}
     </main>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Buttom.css';
 
-const Button = () =>
-    <button className="button">+ Add card</button>
+const Button = ({ onClick }) =>
+    <button className="button" onClick={onClick}>+ Add card</button>
 
 export default Button;

@@ -2,9 +2,14 @@
     display: flex;
     position: relative;
 }
-.chevron-down {
+.chevron {
     margin-right: 6px;
+    transition: transform 0.25s;
 }
+.chevron.open {
+    transform: rotate(180deg);
+}
+
 .user-menu {
     background-color: white;
     border-radius: 5px;
@@ -28,4 +33,16 @@
 }
 .user-menu li {
     list-style: none;
+}
+.user-menu li:not(:last-child) {
+    padding-bottom: 12px;
+}
+.user-button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
 }

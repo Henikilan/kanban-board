@@ -1,48 +1,47 @@
 .user {
-    display: flex;
-    position: relative;
+  display: flex;
+  position: relative;
 }
 .chevron {
-    margin-right: 6px;
-    transition: transform 0.25s;
+  margin-right: 6px;
+  transition: transform 0.25s;
 }
 .chevron.open {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .user-menu {
-    background-color: white;
-    border-radius: 5px;
-    position: absolute;
-    top: 31px;
-    left: -80px;
-    padding: 11px 0 11px 8px;
-    width: 134px;
+  background-color: white;
+  border-radius: 5px;
+  position: absolute;
+  top: 31px;
+  left: -80px;
+  padding: 11px 0 11px 8px;
+  width: 134px;
 }
 .user-menu:before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    top: -5px;
-    right: 10px;
-    border-style: solid;
-    border-width: 0 5px 5px 5px;
-    border-color: transparent transparent #ffffff transparent;
-
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -5px;
+  right: 10px;
+  border-style: solid;
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent #ffffff transparent;
 }
 .user-menu li {
-    list-style: none;
+  list-style: none;
 }
 .user-menu li:not(:last-child) {
-    padding-bottom: 12px;
+  padding-bottom: 12px;
 }
 .user-button {
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 0;
-    display: flex;
-    align-items: center;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
 }

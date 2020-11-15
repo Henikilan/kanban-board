@@ -4,10 +4,7 @@ import Column from "../Column/Column";
 
 const Main = ({ data }) =>
     <main className="main">
-        <Column />
-        <Column />
-        <Column />
-        <Column />
+        {data.map(({ title, issues }) => <Column key={title} title={title} issues={issues} />)}
     </main>
 
 export default Main;

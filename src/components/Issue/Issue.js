@@ -1,9 +1,7 @@
 import React from 'react';
 import './Issue.css';
 
-const Issue = () =>
-    <div className="issue">
-        Login page – performance issues
-    </div>
+const Issue = ({ name }) =>
+    <div className="issue">{name}</div>
 
 export default Issue;

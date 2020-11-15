@@ -4,10 +4,10 @@ import Issues from "../Issues/Issues";
 import Button from "../Button/Button";
 import AddCardForm from "../AddCard/AddCardForm";
 
-const Column = () =>
+const Column = ({ title, issues }) =>
     <div className="column">
-        <div className="title">Backlog</div>
-        <Issues />
+        <div className="title">{title}</div>
+        <Issues issues={issues} />
         <AddCardForm />
         <Button />
     </div>

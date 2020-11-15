@@ -2,10 +2,9 @@ import React from 'react';
 import './Issues.css';
 import Issue from "../Issue/Issue";
 
-const Issues = () =>
+const Issues = ({ issues }) =>
     <div className="issues">
-        <Issue />
-        <Issue />
+        {issues.map(({ id, name }) => <Issue key={id} name={name} />)}
     </div>
 
 export default Issues;

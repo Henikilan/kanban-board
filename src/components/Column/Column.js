@@ -29,7 +29,10 @@ const Column = ({ title, issues, addBacklogCard, previousIssues, onMove }) => {
           <IssueSelector issues={previousIssues} onSelect={handleSelect} />
         )
       ) : (
-        <Button onClick={() => setIsFormOpen(true)} />
+        <Button
+          onClick={() => setIsFormOpen(true)}
+          disabled={!isBacklog && previousIssues.length === 0}
+        />
       )}
     </div>
   );

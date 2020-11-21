@@ -1,8 +1,8 @@
 import React from "react";
 import "./Buttom.css";
 
-const Button = ({ onClick }) => (
-  <button className="button" onClick={onClick}>
+const Button = ({ ...props }) => (
+  <button className="button" {...props}>
     + Add card
   </button>
 );

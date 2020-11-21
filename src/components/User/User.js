@@ -22,6 +22,7 @@ const User = () => {
       {isProfileOpen && (
         <ul className="user-menu">
           <li>Profile</li>
+          <li>My tasks</li>
           <li>Log out</li>
         </ul>
       )}

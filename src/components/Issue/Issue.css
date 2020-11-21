@@ -3,4 +3,8 @@
   border-radius: 5px;
   margin-bottom: 15px;
   padding: 8px;
+  cursor: pointer;
+}
+.issue:hover {
+  color: #0067a3;
 }

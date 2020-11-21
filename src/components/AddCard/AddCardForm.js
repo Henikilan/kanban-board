@@ -1,19 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import "./AddCardForm.css";
 
-const AddCardForm = ({ onSubmit }) => (
-  <form
-    onSubmit={(e) => {
-      onSubmit();
-      e.preventDefault();
-    }}
-  >
-    <label className="label">
-      <input className="input" type="text" />
-    </label>
-    <button className="submit" type="submit">
-      Submit
-    </button>
-  </form>
-);
+const AddCardForm = ({ onSubmit }) => {
+  const [name, setName] = useState("");
+  const handleChange = (event) => {
+    setName(event.target.value);
+  };
+  const handleSubmit = () => {
+    if (name) {
+      onSubmit(name);
+    }
+  };
+
+  return (
+    <form
+      onSubmit={(e) => {
+        handleSubmit();
+        e.preventDefault();
+      }}
+    >
+      <label className="label">
+        <input
+          className="input"
+          type="text"
+          value={name}
+          onChange={handleChange}
+          onBlur={handleSubmit}
+        />
+      </label>
+      <button className="submit" type="submit">
+        Submit
+      </button>
+    </form>
+  );
+};
 export default AddCardForm;

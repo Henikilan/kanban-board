@@ -33,6 +33,10 @@
 .user-menu li {
   list-style: none;
 }
+.user-menu li:hover {
+  color: #0067a3;
+  cursor: pointer;
+}
 .user-menu li:not(:last-child) {
   padding-bottom: 12px;
 }

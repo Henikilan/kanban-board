@@ -3,9 +3,9 @@ import { v4 as uuid } from "uuid";
 import "./Main.css";
 import Column from "../Column/Column";
 
-const Main = ({ data, setData }) => {
+const Main = ({ data, updateData }) => {
   const addBacklogCard = (name) => {
-    setData([
+    updateData([
       ...data.map((dataItem) =>
         dataItem.title === "Backlog"
           ? {
@@ -23,7 +23,7 @@ const Main = ({ data, setData }) => {
     ]);
   };
   const moveCard = (id, index) => {
-    setData([
+    updateData([
       ...data.map((dataItem, currentIndex) => {
         if (currentIndex === index) {
           return {

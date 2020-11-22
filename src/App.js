@@ -6,11 +6,19 @@ import Footer from "./components/Footer/Footer";
 import { dataMock } from "./dataMock";
 
 function App() {
-  const [data, setData] = useState(dataMock);
+  const localStorageData = localStorage.getItem("data");
+  const [data, setData] = useState(
+    localStorageData ? JSON.parse(localStorageData) : dataMock
+  );
+  const updateData = (newData) => {
+    localStorage.setItem("data", JSON.stringify(newData));
+    setData(newData);
+  };
+
   return (
     <div className="App">
       <Header />
-      <Main data={data} setData={setData} />
+      <Main data={data} updateData={updateData} />
       <Footer data={data} />
     </div>
   );

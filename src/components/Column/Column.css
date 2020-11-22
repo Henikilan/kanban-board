@@ -12,3 +12,16 @@
 .title {
   padding-bottom: 12px;
 }
+
+@media only screen and (max-width: 600px) {
+  .column {
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  .column:not(:last-child) {
+    margin-right: 0;
+  }
+  .column:last-child {
+    margin-bottom: 25px;
+  }
+}

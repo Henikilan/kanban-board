@@ -1,9 +1,12 @@
 .issue {
+  display: block;
   background-color: white;
   border-radius: 5px;
   margin-bottom: 15px;
   padding: 8px;
   cursor: pointer;
+  text-decoration: none;
+  color: black
 }
 .issue:hover {
   color: #0067a3;
